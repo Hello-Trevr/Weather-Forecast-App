@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Custom Properties */
+:root{
+    --leading: 2em;
+    --color1: #073785;
+    --color2: #042252;
+    --color3: #365C99; 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: var(--color2);
+}
+
+footer{
+    padding: 2em;
+    background-color: var(--color1);
+    text-align: center;
+    color: white;
+    
+}
+
+.hero-bg{
+    background: #307d99 url(./images/_Blue\ White\ Modern\ Marketing\ Strategy\ Blog\ Banner\ \(1\).png);
+    background-size: 150vh;
+    background-position: 0 30%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-bottom: 4em;
+}
+
+.bg-height{
+    height: 90vh;
+}
+
+header{
+    padding: 1em 0;
+}
+
+.hero-bg a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+section{
+    margin: 0 1em;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em;
+}
+
+h1 span{
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+h1 span::before{
+    content: ' ';
+    position: absolute;
+    width: 3em;
+    background-color: #00bfff;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -0.3em;
+}
+
+.hero-bg p{
+    font-weight: bold;
+    margin: 0 1em 2em;
+}
+
+.form-container{
+    background-color: white;
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+
+label{
+    color: #307d99;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+input[type=text]{
+    border: 1px solid #707070;
+    width: 100%;
+    padding: 1em;
+    border-radius: .5em;
+    margin-top: 1.2em;
+}
+
+.form-container p {
+    color: grey;
+    font-weight: normal;
+    font-size: .9em;
+    margin-top:.3em;
+}
+
+input[type=button]{
+    background-color: #f89104;
+    border: none;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    padding: 1em 0;
+    border-radius: .5em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+input[type=button]:hover{
+    background-color: #FCC708;
+    transition: .4s;
+}
+
+.weather-data{
+    background-color: var(--color3);
+    margin:0;
+    display: none;
+}
+
+.show-text{
+    display: block;
+    animation: fadeIn 2s forwards;
+}
+
+.location{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-right:2em;
+}
+
+.city{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    padding: .3em;
+}
+
+.date{
+    color: white;
+    font-weight: regular;
+    font-size: 1.5em;
+    padding: .3em;
+}
+
+.temp-data{
+    padding: 2em;
+}
+
+
+.temp{
+    color: white;
+    font-weight: bold;
+    font-size: 8em;
+    text-align: center;
+}
+
+.hi-low{
+    color:white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.weather{
+    color:white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.2em;
+}
+
+.weather-clouds{
+    background-image: url(./images/cloudy-img.jpg);
+    background-position: 20%;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.weather-haze{
+    background-image: url(./images/haze-img.jpg);
+    background-position: 20% 60%;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.weather-sunny{
+    background-image: url(./images/sunny.jpg);
+    background-position: 20% 60%;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.weather-rain{
+    background-image: url(./images/rain-img.jpg);
+    background-position: 20% 60%;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.authentic{
+    margin: 0;
+}
+
+.right-col{
+    text-align: center;
+    padding: 10%;
+}
+
+h2{
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::before{
+    content: ' ';
+    position: absolute;
+    width: 8em;
+    background-color: #00bfff;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -0.3em;
+}
+
+img{
+    width: 100%;
+}
+
+p{
+    line-height: var(--leading);
+}
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index:1;
+    place-content: center;
+    color: white;
+    display: none;
+    opacity: 0;
+    font-size: 3em;
+}
+
+.animate-overlay{
+    animation: overlay 3s forwards;
+}
+
+@media (min-width: 730px){
+    section{
+        margin: 0 4em;
+    }
+
+    .form-container{
+        margin: 2em -4em 0;
+    }
+
+}
+
+@media (min-width: 930px){
+  
+    .hero-bg{
+        text-align: left;
+        background-size: 120em;
+    }
+
+    .hero-bg p{
+        margin: 0 0 3em;
+    }
+    
+    .hero-bg section{
+        width: 65%;
+    }
+
+    .form-container{
+        margin: 2em 0 0;
+        padding: 2em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .form{
+        display: flex;
+    }
+
+    .form-left{
+        width: 70%;
+    }
+
+    label{
+        margin: 0;
+    }
+
+    input[type=button]{
+        height: fit-content;
+        font-size: 1.1em;
+        margin-left: 1em;
+        margin-top: 2.2em;
+        padding: .7em 0;
+        width: 30%;
+    }
+
+    .hero-bg p{
+        margin: 0;
+    }
+
+    section.authentic{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "bowl content";
+    }
+
+    .right-col{
+        grid-area: content;
+        padding: 0 10%;
+        text-align: left;
+        align-self: center;
+    }
+
+    img{
+        grid-area: bowl;
+    }
+
+    h1{
+        font-size: 4em;
+    }
+
+    h1 span{
+        font-size: .7em;
+    }
+
+    h2{
+        margin: 0;
+    }
+
+    p{
+        font-size: 1.5em;
+    }
+
+    .weather-data{
+        margin: 3em;
+        border-radius: .5em;
+    }
+
+    .location{
+        border-radius: .5em .5em 0 0;
+        padding: .7em;
+        display: flex;
+    }
+
+    .city{
+        width: 70%;
+    }
+
+    .date{
+        width: 50%;
+        flex: right;
+        padding: .7em;
+        padding-left: 5em;
+        padding-top: .7em;
+        text-align: right;
+    }
+
+    .temp-data{
+        display: flex;
+        padding:2em;
+    }
+
+    .temp{
+        text-align: left;
+    }
+
+    .hi-low{
+        text-align: left;
+    }
+
+    .current{
+        flex:50%;
+    }
+
+    .weather-sec{
+        flex: 50%;
+        padding: 1.2em;
+    }
+
+    .weather-icon{
+        color: white;
+        margin: auto;
+    }
+
+    .weather-icon .fa-cloud{
+        size: 3em;
+        font-size: 6em;
+    }
+}
+
+.landing-page{
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-2em);
+    } 
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes overlay{
+    0%{
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(100%);
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/0d0b2aa32a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="overlay">Loading Weather Data...</div>
+
+    <div class="hero-bg bg-height" id="bg">
+        <section class="top">
+            <header>
+                <i class="fa-solid fa-cloud-sun"></i>
+                <a href="#">weather.info</a>
+            </header>
+
+            <div class="landing-page">
+            <h1><span>Find the current</span>Weather Forecast</h1>
+            <p>This app uses a weather API to find the current weather forcast for cities around the world.</p>
+
+            <div class="form-container">
+                <div class="form">
+                    
+                    <div class="form-left">
+                    <label for="">Enter your city: </label>
+                    <input type="text" autocomplete="off" name="city" class="search-box" id="city" placeholder="What is the weather forecast in..." required>
+                    <p>Example: New York</p>
+                    </div>
+
+                    <input id="search-btn" type="button" value="Search">
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="weather-data" id="data">
+        <div class="location">
+            <div class="city">Nixa, MO</div>
+            <div class="date">Sunday , June 20</div>
+        </div>
+        <div class="temp-data">
+        <div class="current">
+            <div class="temp">90<span>°F</span></div>
+            <div class="hi-low">80°F / 95°F</div>
+        </div>
+        <div class="weather-sec current">
+            <div class="weather-icon"></div>
+            <div class="weather">Sunny</div>
+        </div>
+        </div>
+    </section>
+
+    <footer id="footer" class=""><p>hellotrevr.com</p></footer>
+
+    <!-- <section class="authentic">
+        <div class="right-col">
+            <h2>Authentic. Awesome.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae, tenetur mollitia, dolorem rerum, unde deleniti ipsam explicabo esse ullam culpa impedit sit quod quia. Aut, itaque dicta omnis, a unde sunt voluptates odio, deleniti molestias dolores cumque reiciendis pariatur?</p>
+        </div>
+        <img src="images/dmplings-img.jpg" alt="Picture of dumplings in bowl"/>
+    </section> -->
+
+    <script src="./app.js"></script>
+</body>
+</html>
