@@ -86,22 +86,3 @@ function dateBuilder(d){
 
     return `${day} ${month} ${date}, ${year}`;
 }
-
-// btn.addEventListener('click', () =>{
-    
-//     if(input.value != ''){
-//         displayOverlay();
-//     } else{
-//         return 0;
-//     }
-    
-// })
-
-// function displayOverlay(){
-//     overlay.style.display = 'grid';
-//     overlay.classList.add('animate-overlay')
-//     overlay.addEventListener('animationend', () =>{
-//         overlay.classList.remove('animate-overlay');
-//         overlay.style.display = 'none';
-//     })
-// }
